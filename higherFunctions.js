@@ -81,14 +81,27 @@ rocksWarning('Main St and Central Ave');
 
 
 function turtleFilter(movements){
-	let filtered = [];
+	return movements.filter(movement => movement[0] >= 0 && movement[1] >= 0);
+}
+
+function turtleFilterFun(movements){
+	return movements.filter(function (movement){
+		return (movement[0] >= 0 && movement[1] >= 0);
+	});
+
+}
+
+function turtleMap(movements){
 	
 }
 
-let turtleMove = [[2,3],[1,-9],[3,4],[2,3]];
+//movement = function(movement)
+
+let turtleMove = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
 console.log(turtleFilter(turtleMove));
-console.log(turtleMove);
+console.log(turtleFilterFun(turtleMove));
+
 
 
 
