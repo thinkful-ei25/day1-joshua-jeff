@@ -98,13 +98,24 @@ function turtleMap(movements){
 	return newArray;
 }
 
+function turtleEach(movements){
+	let newArr = [];
+	 movements.forEach(function(elem) {
+		 newArr.push(Math.abs(elem[0] + Math.abs(elem[1])));
+	});
+	return newArr;
+
+}
+
 //movement = function(movement)
 
 let turtleMove = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let turtleMove2 = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
 console.log(turtleFilter(turtleMove));
 console.log(turtleFilterFun(turtleMove));
 console.log(turtleMap(turtleMove));
+console.log(turtleEach(turtleMove2));
 
 
 
