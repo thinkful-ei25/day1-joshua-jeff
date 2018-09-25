@@ -92,7 +92,10 @@ function turtleFilterFun(movements){
 }
 
 function turtleMap(movements){
-	
+	let newArray = movements.map(function(elem) {
+		return Math.abs(elem[0]) + Math.abs(elem[1]);
+	});
+	return newArray;
 }
 
 //movement = function(movement)
@@ -101,7 +104,7 @@ let turtleMove = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
 console.log(turtleFilter(turtleMove));
 console.log(turtleFilterFun(turtleMove));
-
+console.log(turtleMap(turtleMove));
 
 
 
